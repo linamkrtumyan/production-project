@@ -1,0 +1,4 @@
+build/*.ts
+config/build/*.ts
+config/build/types/*.ts
+webpack.config.ts

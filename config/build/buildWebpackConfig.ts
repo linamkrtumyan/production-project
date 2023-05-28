@@ -1,6 +1,8 @@
-import path from "path";
-import { BuildOptions } from "./types/config";
+/* eslint-disable no-use-before-define */
+
 import webpack from "webpack";
+
+import { BuildOptions } from "./types/config";
 import { buildLoaders } from "./buildLoaders";
 import { buildResolvers } from "./buildResolvers";
 import { buildPlugins } from "./buildPlugins";

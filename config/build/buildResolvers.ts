@@ -1,6 +1,6 @@
-import path from "path";
-import webpack, { ResolveOptions } from "webpack";
-import HTMLWebpackPlugin from "html-webpack-plugin";
+/* eslint-disable no-use-before-define */
+
+import { ResolveOptions } from "webpack";
 import { BuildOptions } from "./types/config";
 
 export function buildResolvers(options: BuildOptions): ResolveOptions {

@@ -1,6 +1,6 @@
-import path from "path";
+/* eslint-disable no-use-before-define */
+
 import webpack from "webpack";
-import HTMLWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BuildOptions } from "./types/config";
 
