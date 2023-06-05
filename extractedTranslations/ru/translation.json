@@ -1,6 +1,9 @@
 {
   "about": "about",
+  "errorText": "errorText",
   "language": "language",
   "main": "main",
-  "page not found": "page not found"
+  "page not found": "page not found",
+  "reloadPage": "reloadPage",
+  "throwError": "throwError"
 }
