@@ -2,17 +2,15 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest:true
+    jest: true
   },
-  extends: ['plugin:react/recommended', 'standard-with-typescript'],
-  overrides: [
-    {
-      files: ['global.d.ts'],
-      rules: {
-        'no-undef': 'off'
-      }
+  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:storybook/recommended'],
+  overrides: [{
+    files: ['global.d.ts'],
+    rules: {
+      'no-undef': 'off'
     }
-  ],
+  }],
   parserOptions: {
     parser: '@typescript-eslint-parser',
     project: './tsconfig.json',
@@ -21,22 +19,22 @@ module.exports = {
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
-    extraFileExtensions: ['.config'],
+    extraFileExtensions: ['.config']
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
     indent: [2, 2],
     'react/jsx-indent': [2, 2],
-    'react/jsx-indent-props': [
-      2,
-      { indentMode: 2, ignoreTernaryOperator: true }
-    ],
-    'react/jsx-filename-extension': [
-      2,
-      { extensions: ['js', 'jsx', 'ts', 'tsx'] }
-    ],
-    camelcase: ['error', {properties: 'never'}],
-
+    'react/jsx-indent-props': [2, {
+      indentMode: 2,
+      ignoreTernaryOperator: true
+    }],
+    'react/jsx-filename-extension': [2, {
+      extensions: ['js', 'jsx', 'ts', 'tsx']
+    }],
+    camelcase: ['error', {
+      properties: 'never'
+    }],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'warn',
@@ -65,4 +63,4 @@ module.exports = {
       version: 'detect'
     }
   }
-}
+};
