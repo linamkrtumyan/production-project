@@ -1,23 +1,23 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
 
-import Loader from "./Loader";
-import "app/styles/index.scss";
+import Loader from './Loader';
+import 'app/styles/index.scss';
 
 const meta = {
-  title: "shared/Loader",
+  title: 'shared/Loader',
   component: Loader,
   parameters: {
-    layout: "centered",
+    layout: 'centered'
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     // backgroundColor: { control: 'color' },
-  },
+  }
 } satisfies Meta<typeof Loader>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
-  args: {},
+  args: {}
 };

@@ -1,8 +1,8 @@
-import { render, screen } from "@testing-library/react";
-import { Button } from "./Button";
+import { render, screen } from '@testing-library/react';
+import { Button } from './Button';
 
-describe("classNames", () => {
-  test("with mods false", () => {
+describe('classNames', () => {
+  test('with mods false', () => {
     render(<Button>test</Button>);
     expect(screen.getByText('test')).toBeInTheDocument();
   });
@@ -12,9 +12,4 @@ describe("classNames", () => {
   //   expect(screen.getByText('test')).toHaveClass('clear');
   //   screen.debug();
   // });
-
-
-
 });
-
-

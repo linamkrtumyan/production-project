@@ -10,9 +10,9 @@ render(
   <BrowserRouter>
     <ErrorBoundary>
       <ThemeProvider>
-       <App />
-       </ThemeProvider>
-    </ErrorBoundary>   
+        <App />
+      </ThemeProvider>
+    </ErrorBoundary>
   </BrowserRouter>,
   document.getElementById('root')
 );
