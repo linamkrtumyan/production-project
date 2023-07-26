@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import  Modal  from './Modal';
+import Modal from './Modal';
 import 'app/styles/index.scss'
 
 const meta = {
@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    isOpen:true,
+    isOpen: true,
     children: 'Modal content'
   }
 };

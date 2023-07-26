@@ -1,15 +1,15 @@
-import React, { useCallback, useState } from "react";
-import { classNames } from "shared/lib/classNames/classNames";
-import cls from "./Navbar.module.scss";
-import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import Modal from "shared/ui/Modal/Modal";
-import { Button, ThemeButton } from "shared/ui/Button/Button";
+import React, { useCallback, useState } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import cls from './Navbar.module.scss';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import Modal from 'shared/ui/Modal/Modal';
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 interface NavbarProps {
   className?: string;
 }
 
-export const Navbar = ({ className = "" }: NavbarProps) => {
+export const Navbar = ({ className = '' }: NavbarProps) => {
   const [isAuthModal, setIsAuthModal] = useState(false);
 
   const onToggleModal = useCallback(() => {

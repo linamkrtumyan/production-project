@@ -21,7 +21,7 @@ module.exports = {
     sourceType: 'module',
     extraFileExtensions: ['.config']
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks'],
   rules: {
     indent: [2, 2],
     'react/jsx-indent': [2, 2],

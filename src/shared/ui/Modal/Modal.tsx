@@ -1,8 +1,7 @@
-import { useTranslation } from "react-i18next";
-import { classNames } from "shared/lib/classNames/classNames";
-import cls from "./Modal.module.scss";
-import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
-import Portal from "../Portal/Portal";
+import { classNames } from 'shared/lib/classNames/classNames';
+import cls from './Modal.module.scss';
+import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import Portal from '../Portal/Portal';
 
 interface ModalProps {
   className?: string;
@@ -13,16 +12,14 @@ interface ModalProps {
 
 const ANIMATION_DELAY = 300;
 
-function Modal(props: ModalProps) {
-  const { t, i18n } = useTranslation();
-
-  const { className = "", children, isOpen = false, onClose } = props;
+function Modal (props: ModalProps) {
+  const { className = '', children, isOpen = false, onClose } = props;
 
   const [isClosing, setIsClosing] = useState(false);
   const timeRef = useRef<ReturnType<typeof setTimeout>>();
 
   const closeHandler = useCallback(() => {
-    if (onClose) {
+    if (onClose != null) {
       setIsClosing(true);
       timeRef.current = setTimeout(() => {
         onClose();
@@ -37,7 +34,7 @@ function Modal(props: ModalProps) {
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
+      if (e.key === 'Escape') {
         closeHandler();
       }
     },
@@ -46,17 +43,17 @@ function Modal(props: ModalProps) {
 
   useEffect(() => {
     if (isOpen) {
-      window.addEventListener("keydown", onKeyDown);
+      window.addEventListener('keydown', onKeyDown);
     }
     return () => {
       clearTimeout(timeRef.current);
-      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener('keydown', onKeyDown);
     };
   }, [isOpen, onKeyDown]);
 
   const mods: Record<string, boolean> = {
     [cls.opened]: isOpen,
-    [cls.isClosing]: isClosing,
+    [cls.isClosing]: isClosing
   };
 
   return (
