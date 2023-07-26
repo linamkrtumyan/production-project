@@ -21,7 +21,7 @@ module.exports = {
     sourceType: 'module',
     extraFileExtensions: ['.config']
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
   rules: {
     indent: [2, 2],
     'react/jsx-indent': [2, 2],
@@ -56,7 +56,9 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'warn',
     'import/extensions': 'off',
     "import/no-extraneous-dependencies": 'off',
-    'no-underscore-dangle': 'off'
+    'no-underscore-dangle': 'off',
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error"
   },
   settings: {
     react: {
