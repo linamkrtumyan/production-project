@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Navbar.module.scss';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import Modal from 'shared/ui/Modal/Modal';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 interface NavbarProps {
   className?: string;
@@ -25,7 +25,7 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
         About
       </AppLink>
 
-      <Button theme={ThemeButton.OUTLINE} onClick={onToggleModal}>
+      <Button theme={ButtonTheme.OUTLINE} onClick={onToggleModal}>
         Login
       </Button>
 
