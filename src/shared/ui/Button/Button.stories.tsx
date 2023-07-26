@@ -1,40 +1,40 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Button, ButtonTheme } from './Button';
-import 'app/styles/index.scss'
+import 'app/styles/index.scss';
 
 const meta = {
-  title: 'shared/Button',
-  component: Button,
-  parameters: {
-    layout: 'centered'
-  },
-  tags: ['autodocs'],
-  argTypes: {
+    title: 'shared/Button',
+    component: Button,
+    parameters: {
+        layout: 'centered',
+    },
+    tags: ['autodocs'],
+    argTypes: {
     // backgroundColor: { control: 'color' },
-  }
+    },
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {
+    args: {
     // primary: true,
-    children: 'Button'
-  }
+        children: 'Button',
+    },
 };
 
 export const Clear: Story = {
-  args: {
-    children: 'Button',
-    theme: ButtonTheme.CLEAR
-  }
+    args: {
+        children: 'Button',
+        theme: ButtonTheme.CLEAR,
+    },
 };
 
 export const Outline: Story = {
-  args: {
-    children: 'Button',
-    theme: ButtonTheme.OUTLINE
-  }
+    args: {
+        children: 'Button',
+        theme: ButtonTheme.OUTLINE,
+    },
 };

@@ -6,10 +6,10 @@ interface PortalProps {
   element?: HTMLElement;
 }
 
-function Portal (props: PortalProps) {
-  const { children, element = document.body } = props
+function Portal(props: PortalProps) {
+    const { children, element = document.body } = props;
 
-  return createPortal(children, element);
+    return createPortal(children, element);
 }
 
 export default Portal;

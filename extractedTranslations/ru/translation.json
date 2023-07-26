@@ -1,11 +1,20 @@
 {
+  "About": "About",
+  "Login": "Login",
+  "Main": "Main",
   "about": "about",
+  "decrement": "decrement",
+  "error": "error",
   "errorText": "errorText",
+  "increment": "increment",
   "language": "language",
   "main": "main",
   "page not found": "page not found",
+  "reload": "reload",
   "reloadPage": "reloadPage",
+  "snakcjsbndkjfaslbnkjdfb": "snakcjsbndkjfaslbnkjdfb",
   "throwError": "throwError",
+  "value": "value",
   "Главная": "Главная",
   "О сайте": "О сайте"
 }

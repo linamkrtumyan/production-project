@@ -1,25 +1,25 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { CounterSchema } from '../types/counterSchema'
-
+import { createSlice } from '@reduxjs/toolkit';
+import { CounterSchema } from '../types/counterSchema';
 
 const initialState: CounterSchema = {
-    value: 0
-}
-
+    value: 0,
+};
 
 export const counterSlice = createSlice({
-  name: 'counter',
-  initialState: initialState,
-  reducers: {
-    increment: state => {
-      state.value += 1
-    },
-    decrement: state => {
-      state.value -= 1
-    },
-    
-  }
-})
+    name: 'counter',
+    initialState,
+    reducers: {
+        increment: (state) => {
+            /* eslint no-param-reassign: "error" */
+            state.value += 1;
+        },
+        decrement: (state) => {
+            /* eslint no-param-reassign: "error" */
+            state.value -= 1;
+        },
 
-export const { actions: counterActions } = counterSlice
-export const { reducer: counterReducer } = counterSlice
+    },
+});
+
+export const { actions: counterActions } = counterSlice;
+export const { reducer: counterReducer } = counterSlice;
