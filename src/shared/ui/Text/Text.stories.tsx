@@ -1,7 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { Theme } from 'app/providers/ThemeProvider';
 
 export default {
     title: 'shared/Text',

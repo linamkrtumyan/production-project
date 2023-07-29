@@ -4,11 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { counterActions } from '../model/slice/counterSlice';
 import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
 
-interface CounterProps {
-  className?: string;
-}
-
-export const Counter = ({ className = '' }: CounterProps) => {
+export const Counter = () => {
     const dispatch = useDispatch();
     const counterValue = useSelector(getCounterValue);
 
