@@ -13,27 +13,22 @@ export const loginSlice = createSlice({
     initialState,
     reducers: {
         setUsername: (state, action: PayloadAction<string>) => {
-            /* eslint no-param-reassign: "error" */
             state.username = action.payload;
         },
         setPassword: (state, action: PayloadAction<string>) => {
-            /* eslint no-param-reassign: "error" */
             state.password = action.payload;
         },
     },
     extraReducers: (builder) => {
         builder
             .addCase(loginByUsername.pending, (state) => {
-                /* eslint no-param-reassign: "error" */
                 state.error = undefined;
                 state.isLoading = true;
             })
             .addCase(loginByUsername.fulfilled, (state) => {
-                /* eslint no-param-reassign: "error" */
                 state.isLoading = false;
             })
             .addCase(loginByUsername.rejected, (state, action) => {
-                /* eslint no-param-reassign: "error" */
                 state.isLoading = false;
                 state.error = action.payload;
             });

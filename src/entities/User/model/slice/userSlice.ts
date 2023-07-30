@@ -9,18 +9,15 @@ export const userSlice = createSlice({
     initialState,
     reducers: {
         setAuthData: (state, action: PayloadAction<User>) => {
-            /* eslint no-param-reassign: "error" */
             state.authData = action.payload;
         },
         initAuthData: (state) => {
             const user = localStorage.getItem(USER_LOCALSTORAGE_KEY);
             if (user) {
-                /* eslint no-param-reassign: "error" */
                 state.authData = JSON.parse(user);
             }
         },
         logout: (state) => {
-            /* eslint no-param-reassign: "error" */
             state.authData = undefined;
             localStorage.removeItem(USER_LOCALSTORAGE_KEY);
         },

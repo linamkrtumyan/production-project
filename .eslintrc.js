@@ -53,9 +53,12 @@ module.exports = {
             'warn',
             { argsIgnorePattern: '^_' },
         ],
+        'no-param-reassign': 'off',
+        'no-undef': 'off',
     },
     globals: {
         __IS_DEV__: true,
+        __API__: true,
     },
     overrides: [
         {
